@@ -1,0 +1,340 @@
+// // const express= require('express')
+// // const app =express()
+// // var nodemailer = require('nodemailer');
+// // app.use(express.urlencoded({extended:false})) 
+// // app.post('/post',function(req,res){
+// //     var transporter = nodemailer.createTransport({
+// //         service: 'gmail',
+// //         auth: {
+// //           user: 'unluckyboysam5@gmail.com',
+// //           pass: 'bbdf bsun qyuv pjjm'
+// //         }
+// //       });
+      
+// //       var mailOptions = {
+// //         from: 'unluckyboysam5@gmail.com',
+// //         to: 'sammichleak47@gmailcom',
+// //         subject: req.body.title,
+// //         text:req.body.message,
+// //         attachments:[
+// //           {
+// //             filename:req.body.image
+// //           }
+// //         ]
+// //       };
+      
+// //       transporter.sendMail(mailOptions, function(error, info){
+// //         if (error) {
+// //           console.log(error);
+// //         } else {
+// //           console.log('Email sent: ' + info.response);
+// //         }
+// //       });
+// //       res.json("data post sucessfully")
+// //       console.log("Data Post Succesfully")
+      
+// // })
+
+// // app.listen(2500,()=>{
+// //     console.log("Server is running in port: 2500")
+// // })
+
+// // function isValidEmail(email) {
+// //   // Use a simple regex for basic validation
+// //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// //   return emailRegex.test(email);
+// // }
+
+
+// // const express = require('express');
+// // const app = express();
+// // var nodemailer = require('nodemailer');
+
+// // app.use(express.urlencoded({ extended: false }));
+
+// // app.post('/post', function (req, res) {
+// //   // if (!req.body.user || !isValidEmail(req.body.user)) {
+// //   //   return res.status(400).json({ error: 'Invalid or missing recipient email address' });
+// //   // }
+
+// //   var transporter = nodemailer.createTransport({
+// //     service: 'gmail',
+// //     auth: {
+// //       user: 'unluckyboysam5@gmail.com',
+// //       pass: 'bbdf bsun qyuv pjjm',
+// //     },
+// //   });
+
+// //   var mailOptions = {
+// //     from: 'unluckyboysam5@gmail.com',
+// //     to: req.body.user,
+// //     subject: req.body.title || 'Default Subject',
+// //     text: req.body.message || 'Default Message',
+// //     attachments: [
+// //       {
+// //         filename: req.body.image || 'default.jpg',
+// //       },
+// //     ],
+// //   };
+
+// //   transporter.sendMail(mailOptions, function (error, info) {
+// //     if (error) {
+// //       console.log(error);
+// //       return res.status(500).json({ error: 'Failed to send email' });
+// //     } else {
+// //       console.log('Email sent: ' + info.response);
+// //       res.json('Data posted successfully');
+// //       console.log('Data Posted Successfully');
+// //     }
+// //   });
+// // });
+
+// // app.listen(2500, () => {
+// //   console.log('Server is running on port: 2500');
+// // });
+
+// // function isValidEmail(email) {
+// //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// //   return emailRegex.test(email);
+// // }
+
+// // var express= require('express')
+// // const app= express()
+
+// // app.use(express.urlencoded({ extended: false }));
+// // var nodemailer = require('nodemailer');
+// // app.post('/post',function(req,res){
+// //   var transporter = nodemailer.createTransport({
+// //     service: 'gmail',
+// //     auth: {
+// //       user: 'unluckyboysam5@gmail.com',
+// //       pass: 'bbdf bsun qyuv pjjm',
+// //     }
+// //   });
+  
+// //   var mailOptions = {
+// //     from: 'unluckyboysam5@gmail.com',
+// //     to: req.body.user,
+// //     subject: req.body.title,
+// //     text: req.body.message
+// //   };
+  
+// //   transporter.sendMail(mailOptions, function(error, info){
+// //     if (error) {
+// //       console.log("we have some prbm in sending mail" + error);
+// //     } else {
+// //       console.log('Email sent: ' + info.response);
+// //     }
+// //     res.json('Data posted successfully');
+// //       console.log('Data Posted Successfully');
+// //   });
+  
+// // })
+
+
+// // const express= require('express')
+// // const app =express()
+// // app.use(express.urlencoded({ extended: false }));
+
+// // var nodemailer = require('nodemailer');
+// // app.post('/post',function(req,res){
+// //   var transporter = nodemailer.createTransport({
+// //     service: 'gmail',
+// //     auth: {
+// //       user: 'unluckyboysam5@gmail.com',
+// //             pass: 'bbdf bsun qyuv pjjm',
+          
+// //     }
+// //   });
+  
+// //   var mailOptions = {
+// //     from: 'unluckyboysam5@gmail.com',
+// //     to: [req.body.user1],
+// //     subject: req.body.subject,
+// //     text: req.body.text,
+// //     image:req.body.image,
+  
+// //   };
+// //   res.json('Data posted successfully from post man ');
+// //       console.log('Posted Data Received Successfully from post man');
+// //       console.log(req.body)
+// //   transporter.sendMail(mailOptions, function(error, info){
+// //     if (error) {
+// //       console.log(error);
+// //     } else {
+// //       console.log('Email sent: ' + info.response);
+// //     }
+    
+// //   });
+  
+// // })
+
+// // app.listen(5000,()=>{
+// //   console.log("server : 5000")
+// // })
+
+
+
+
+// const express = require('express');
+// const app = express();
+// var nodemailer = require('nodemailer');
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json())
+
+
+// app.post('/post', function (req, res) {
+//   // // Ensure that req.body.user1 is defined and is a valid email address
+//   // if (!req.body.user1 || !isValidEmail(req.body.user1)) {
+//   //   return res.status(400).json({ error: 'Invalid or missing recipient email address' });
+//   // }
+
+//   var transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//       user: 'unluckyboysam5@gmail.com',
+//       pass: 'bbdf bsun qyuv pjjm',
+//     }
+//   });
+
+//   var mailOptions = {
+//     to:"sammichleak47@gmail.com", // Use an array for multiple recipients
+//     subject: req.body.subject,
+//     text: req.body.text,
+//     // image: req.body.image,
+//   };
+
+//   res.json('Data posted successfully from Postman');
+//   console.log('Posted Data Received Successfully from Postman');
+//   console.log(req.body);
+//   console.log('User1:', req.body.user1);
+// console.log('Subject:', req.body.subject);
+// console.log('Text:', req.body.text);
+// console.log('Image:', req.body.image);
+
+//   transporter.sendMail(mailOptions, function (error, info) {
+//     if (error) {
+//       console.log(error);
+//     } else {
+//       console.log('Email sent: ' + info.response);
+//     }
+//   });
+
+// });
+
+// app.listen(5000, () => {
+//   console.log('Server is running on port 5000');
+// });
+
+
+
+
+
+
+
+
+
+
+// const express = require('express')
+// const app = express()
+// const path = require('path')
+// const multer = require('multer')
+// var nodemailer = require('nodemailer');
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json())
+
+
+// var storage = multer.diskStorage({
+   
+       
+//     destination : function(req, file, cb){         
+       
+//          cb(null, 'uploads')
+
+//     },
+//     filename :function(req, file, cb){
+       
+//         cb(null, file.originalname.replace(/\.[^/.]+$/,"") + '-' + Date.now() + path.extname(file.originalname))
+//     }
+// })
+
+
+
+// let  maxSize =2 * 1000 * 1000
+
+// let upload =    multer({
+//     storage :storage,
+//     // limits :{
+//     //     fileSize : maxSize   
+//     // },
+//     // fileFilter : function(req, file, cb){
+        
+//     //     console.log(file.mimetype);
+//     //     let filetypes =/jpeg|jpg|png/;
+       
+//     //     let mimetype =filetypes.test(file.mimetype)
+       
+//     //     let extname =filetypes.test(path.extname(file.originalname).toLowerCase())
+//     //     if(mimetype && extname){
+//     //          return  cb(null, true);
+//     //     }
+//     //     cb("Error:this file id not supported please use this files:" + filetypes)
+        
+//     // }
+// }).single('image')
+
+
+// // app.get('/',function(req,res){
+// //     res.render('signup')
+    
+// // })
+
+// app.post('/post',(req, res, next)=>{
+//     upload(req, res, function(err){
+        
+//         if(err){
+//             if(err instanceof multer.MulterError && err.code == "LIMIT_FILE_SIZE"){
+//                 return res.send("File size is maximum 2mb");
+//              }
+//             res.send(err);
+//         }else{
+//             // res.send("Success Image Uploaded!")
+//             var transporter = nodemailer.createTransport({
+//               service: 'gmail',
+//               auth: {
+//                 user: 'unluckyboysam5@gmail.com',
+//                 pass: 'bbdf bsun qyuv pjjm',
+//               }
+//             });
+          
+//             var mailOptions = {
+//               to:"sammichleak47@gmail.com", // Use an array for multiple recipients
+//               subject:"hello",
+//               text:"good afternoon",
+//               attachments:[
+//                 {
+//                   filename:req.body.image,
+//                   path:path.join(__dirname+'/uploads/'+ req.body.image),
+                  
+//                 }
+//               ]
+//             };
+          
+//             res.json('Data posted successfully from Postman');
+//             console.log('Posted Data Received Successfully from Postman');
+     
+//             transporter.sendMail(mailOptions, function (error, info) {
+//               if (error) {
+//                 console.log(error);
+//               } else {
+//                 console.log('Email sent: ' + info.response);
+//               }
+//             });
+//       }      
+//     })  
+// })
+
+
+// app.listen(3030,()=>{
+//     console.log("server running :3030")
+// })
